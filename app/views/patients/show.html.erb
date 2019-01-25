@@ -1,5 +1,16 @@
-<h2><%= @patient.name %></h2>
-Age:
-  <% @patient.age.each do |a| %>
-    <%= link_to a.patient.appointment_datetime, user_path(patient.name) %>
+
+  <h1><%= @patient.name %></h1>
+  
+  <h2>Doctors: </h2>
+  <ul>
+  <% @patient.doctors.each do |doctor| %>
+    <li> <%= link_to doctor.name, doctor %> </li>
   <% end %>
+  </ul>
+  
+  <h2>Appointments:</h2>
+  <ul>
+  <% @patient.appointments.each do |apmt| %>
+    <li><%= apmt.appointment %> </li>
+  <% end %>
+  </ul>
