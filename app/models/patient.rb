@@ -1,4 +1,8 @@
 class Patient < ActiveRecord::Base
   has_many :appointments
-  has_many :appointments, through:
+  has_many :doctors, through: :appointments
+
+  def appointments
+    appointments.length
+  end
 end
