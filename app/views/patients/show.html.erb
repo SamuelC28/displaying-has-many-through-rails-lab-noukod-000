@@ -1,5 +1,5 @@
 <h2><%= @patient.name %></h2>
 Age:
   <% @patient.age.each do |a| %>
-    <%= link_to a.patient.appointment_datetime, user_path(patient.name) %> 
+    <%= link_to a.patient.appointment_datetime, user_path(patient.name) %>
   <% end %>
