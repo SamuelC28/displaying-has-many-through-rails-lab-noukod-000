@@ -3,7 +3,7 @@
   Age: <%= @patient.age %>
 </p>
 Comments:
-  <% @patient.comments.each do |comment| %>
-    <%= link_to comment.user.username, user_path(comment.user) %> said
+  <% @patient.age.each do |a| %>
+    <%= link_to a.patient.appointment_datetime, user_path(patient.name) %> said
     <%= comment.content %>
   <% end %>
